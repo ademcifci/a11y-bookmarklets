@@ -7,7 +7,13 @@
     for (var i = 0, n = all_el.length; i < n; i++) {
         if (/^h\d{1}$/gi.test(all_el[i].nodeName)) {
             //arr.push(all_el[i].nodeName);
-			a += all_el[i].nodeName+" - "+all_el[i].innerHTML+ "<br />\n";
+			if(all_el[i].style.getAttribute('display') == 'none')
+				{
+					a += all_el[i].nodeName+" - "+all_el[i].innerHTML+ " (display:none)<br />\n";
+				}
+			else{
+				a += all_el[i].nodeName+" - "+all_el[i].innerHTML+ "<br />\n";
+			}
 			counter ++;
         }
     }
