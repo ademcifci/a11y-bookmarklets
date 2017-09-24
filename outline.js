@@ -8,6 +8,7 @@
         if (/^h\d{1}$/gi.test(all_el[i].nodeName)) {
             //arr.push(all_el[i].nodeName);
 		var dsp = all_el[i].currentStyle ? all_el[i].currentStyle.display : getComputedStyle(all_el[i], null).display;
+		alert(dsp);
 			if(dsp  == 'none')
 				{
 					a += all_el[i].nodeName+" - "+all_el[i].innerHTML+ " (display:none)<br />\n";
