@@ -33,7 +33,8 @@ var par = element;
 	{
 		if (par != '[object]')   // to break loop at no object to call/check
 		{
-			var dis = par.currentStyle.getPropertyValue('display');
+			var dis = par.currentStyle ? element.currentStyle.display :
+                          getComputedStyle(element, null).display;;
 			//alert("dis returned is " + dis);
 			if (dis == 'none')
 				{
